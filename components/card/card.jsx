@@ -1,31 +1,31 @@
 import { StyleSheet, Text, View } from "react-native"
 
-export const Card = () => {
+export const Card = ({cep, logradouro, bairro, uf, estado, regiao}) => {
     return(
         <View style={styles.card} showsVerticalScrollIndicator={false}>
             <View>
                 <Text style={styles.tituloValor}>CEP:</Text>
-                <Text style={styles.valor}>Dado 01</Text>
+                <Text style={styles.valor}>{cep}</Text>
             </View>
             <View>
                 <Text style={styles.tituloValor}>Logradouro:</Text>
-                <Text style={styles.valor}>Dado 02</Text>
+                <Text style={styles.valor}>{logradouro}</Text>
             </View>
             <View>
                 <Text style={styles.tituloValor}>Bairro:</Text>
-                <Text style={styles.valor}>Dado 03</Text>
+                <Text style={styles.valor}>{bairro}</Text>
             </View>
             <View>
                 <Text style={styles.tituloValor}>UF:</Text>
-                <Text style={styles.valor}>Dado 04</Text>
+                <Text style={styles.valor}>{uf}</Text>
             </View>
             <View>
                 <Text style={styles.tituloValor}>Estado:</Text>
-                <Text style={styles.valor}>Dado 05</Text>
+                <Text style={styles.valor}>{estado}</Text>
             </View>
             <View>
                 <Text style={styles.tituloValor}>Região:</Text>
-                <Text style={styles.valor}>Dado 06</Text>
+                <Text style={styles.valor}>{regiao}</Text>
             </View>   
         </View>
     )
@@ -49,6 +49,9 @@ const styles = StyleSheet.create({
         gap: 25,
     },
     tituloValor:{
-        fontWeight: 700,
+        fontFamily: "Poppins-Bold"
+    },
+    valor:{
+        fontFamily: "Poppins-Regular"
     }
 })
