@@ -20,7 +20,7 @@ export default function RootLayout() {
 
   return(
     <Stack>
-      <Stack.Screen name='index' options={{title:'FindCEP',headerTransparent: false, headerShown: true}}/>
+      <Stack.Screen name='index' options={{title:'',headerTransparent: true, headerShown: false}}/>
     </Stack>
   )
 }
